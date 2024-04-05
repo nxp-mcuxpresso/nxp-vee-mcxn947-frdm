@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ANT Buildfile
+
+  Copyright 2024 MicroEJ Corp. All rights reserved.
+  MicroEJ Corp. PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
+
+-->
+<project name="partial-buffer-init">
+
+	<import file="${scripts.dir}/extension-init.xml" />
+
+	<!-- Is the VEE Port using Partial Buffering -->
+	<property name="com.microej.partial.support.isEnabled" value="true"/>
+		
+	<target name="partial-buffer-init:constant" extensionOf="init/execution">
+		<augment id="init.constants">
+			<propertyref name="com.microej.partial.support.isEnabled"/>
+		</augment>
+	</target>
+
+</project>

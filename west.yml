@@ -1,0 +1,50 @@
+# The west manifest file for MCXN947 Platform Accelerator
+
+manifest:
+  remotes:
+    - name: nxp-mcuxpresso
+      url-base: https://github.com/nxp-mcuxpresso
+    - name: freertos
+      url-base: https://github.com/FreeRTOS
+  # Please add items below in reverse alphabetical order
+  projects:
+    - name: mcux-sdk
+      remote: nxp-mcuxpresso
+      revision: MCUX_2.14.0_MCXNx4x
+      path: nxp-vee-mcxn947-frdm/bsp/mcux-sdk/core
+    - name: CMSIS_5
+      path: nxp-vee-mcxn947-frdm/bsp/mcux-sdk/core/CMSIS
+      revision: MCUX_2.14.0
+      remote: nxp-mcuxpresso
+    - name: FreeRTOS-Kernel
+      revision: MCUX_2.14.0_MCXNx4x
+      remote: nxp-mcuxpresso
+      path: nxp-vee-mcxn947-frdm/bsp/mcux-sdk/rtos/freertos/freertos-kernel
+    - name: fatfs
+      remote: nxp-mcuxpresso
+      path: nxp-vee-mcxn947-frdm/bsp/mcux-sdk/middleware/fatfs
+      revision: MCUX_2.14.0_MCXNx4x
+    - name: mcux-sdk-middleware-sdmmc
+      remote: nxp-mcuxpresso
+      revision: MCUX_2.14.0_MCXNx4x
+      path: nxp-vee-mcxn947-frdm/bsp/mcux-sdk/middleware/sdmmc
+    - name: mcux-sdk-middleware-tensorflow
+      remote: nxp-mcuxpresso
+      revision: MCUX_2.14.0_MCXNx4x
+      path: nxp-vee-mcxn947-frdm/bsp/mcux-sdk/middleware/eiq/tensorflow-lite
+    - name: mcux-sdk-middleware-eiq
+      remote: nxp-mcuxpresso
+      revision: MCUX_2.14.0_MCXNx4x
+      path: nxp-vee-mcxn947-frdm/bsp/mcux-sdk/middleware/eiq
+    - name: lwip
+      remote: nxp-mcuxpresso
+      revision: MCUX_2.14.0_MCXNx4x
+      path: nxp-vee-mcxn947-frdm/bsp/mcux-sdk/middleware/lwip
+    - name: mbedtls
+      remote: nxp-mcuxpresso
+      revision: MCUX_2.14.0_MCXNx4x
+      path: nxp-vee-mcxn947-frdm/bsp/mcux-sdk/middleware/mbedtls
+
+  self:
+    path: nxp-vee-mcxn947-frdm
+    west-commands: scripts/west-commands.yml

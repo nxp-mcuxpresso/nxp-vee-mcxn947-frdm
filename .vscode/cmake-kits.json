@@ -1,0 +1,14 @@
+[
+    {
+        "name": "armgcc",
+        "keep": true,
+        "cmakeSettings": {
+            "LANGUAGE": "C",
+            "DEBUG_CONSOLE": "UART",
+            "POSTPROCESS_UTILITY": "${command:mcuxpresso.postProcessPath}",
+            "SdkRootDirPath": "${command:mcuxpresso.repoPath}"
+        },
+    "keep": true,
+        "toolchainFile": "${workspaceFolder}/bsp/mcux-sdk/core/tools/cmake_toolchain_files/armgcc.cmake"
+    }
+]

@@ -1,0 +1,26 @@
+{
+  "version": "1.4",
+  "toolchainPath": "${env:ARMGCC_DIR}",
+  "linkedProjects": [],
+  "trustZoneType": "none",
+  "multicoreType": "none",
+  "debug": {
+    "linkserver": {
+      "device": "MCXN947:FRDM-MCXN947",
+      "core": "cm33_core0"
+    },
+    "pemicro": {},
+    "segger": {
+      "device": "Cortex-M33"
+    }
+  },
+  "projectType": "sdk-freestanding",
+  "sdk": {
+    "version": "2.14.0",
+    "path": "${workspaceFolder}/bsp/mcux-sdk/core/",
+    "boardId": "frdmmcxn947",
+    "deviceId": "MCXN947",
+    "coreId": "cm33_core0_MCXN947",
+    "manifestId": "SDK_2.x_FRDM-MCXN947_manifest_v3_13"
+  }
+}
