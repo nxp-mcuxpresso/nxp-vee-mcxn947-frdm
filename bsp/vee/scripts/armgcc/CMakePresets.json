@@ -1,0 +1,63 @@
+{
+  "version": 7,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 27
+  },
+  "configurePresets": [
+    {
+      "name": "preset-env",
+      "displayName": "preset-env",
+      "hidden": true,
+      "toolchainFile": "../../../../mcux-sdk/core/tools/cmake_toolchain_files/armgcc.cmake",
+      "environment": {
+        "ARMGCC_DIR": "$penv{ARMGCC_DIR}",
+        "SdkRootDirPath": "${sourceDir}/../../../mcux-sdk/"
+      },
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/${presetName}",
+      "cacheVariables": {
+        "DEBUG_CONSOLE": "UART",
+        "LANGUAGE": "C",
+        "LS_DEVICE": "MCXN947:MCX-N9XX-BRK",
+        "JLINK_DEVICE": "MCXN947_M33_0",
+        "JLINK_MEM_LOCATION": "0x10000000",
+        "LIBRARY_TYPE": "NOLIB",
+        "ENABLE_AI": "0",
+        "ENABLE_NET": "1",
+        "ENABLE_MULTI_APP": "0",
+        "ENABLE_SEC": "1",
+        "ENABLE_SHELL": "1",
+        "ENABLE_SYSTEM_VIEW": "0"
+      }
+    },
+    {
+      "name": "debug",
+      "displayName": "debug",
+      "inherits": "preset-env",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "debug"
+      }
+    },
+    {
+      "name": "release",
+      "displayName": "release",
+      "inherits": "preset-env",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "release"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "debug",
+      "displayName": "debug",
+      "configurePreset": "debug"
+    },
+    {
+      "name": "release",
+      "displayName": "release",
+      "configurePreset": "release"
+    }
+  ]
+}

@@ -1,18 +1,7 @@
 {
   "cmake.configureOnOpen": false,
   "C_Cpp.errorSquiggles": "disabled",
-  "cmake.preferredGenerators": [
-    "Unix Makefiles",
-    "Ninja",
-    "MinGW Makefiles"
-  ],
-  "cmake.sourceDirectory": "${workspaceFolder}/",
-  "cmake.buildDirectory": "${workspaceFolder}/build/${buildType}",
-
-  "cmake.configureArgs": [
-          "-DENABLE_NET=1",
-          "-DENABLE_SEC=1",
-          "-DENABLE_AI=0",
-          "-DJMAIN=com.nxp.simpleGFX.SimpleGFX"
-  ]
+  "cmake.sourceDirectory": "${workspaceFolder}/bsp/vee/scripts/armgcc",
+  "cmake.useCMakePresets": "always",
+  "cmake.buildTask": true
 }

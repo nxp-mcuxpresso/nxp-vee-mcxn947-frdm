@@ -10,41 +10,40 @@ manifest:
   projects:
     - name: mcux-sdk
       remote: nxp-mcuxpresso
-      revision: MCUX_2.14.0_MCXNx4x
+      revision: MCUX_2.16.000
       path: nxp-vee-mcxn947-frdm/bsp/mcux-sdk/core
     - name: CMSIS_5
       path: nxp-vee-mcxn947-frdm/bsp/mcux-sdk/core/CMSIS
-      revision: MCUX_2.14.0
+      revision: MCUX_2.16.000
       remote: nxp-mcuxpresso
     - name: FreeRTOS-Kernel
-      revision: MCUX_2.14.0_MCXNx4x
+      revision: MCUX_2.16.000
       remote: nxp-mcuxpresso
       path: nxp-vee-mcxn947-frdm/bsp/mcux-sdk/rtos/freertos/freertos-kernel
     - name: fatfs
       remote: nxp-mcuxpresso
       path: nxp-vee-mcxn947-frdm/bsp/mcux-sdk/middleware/fatfs
-      revision: MCUX_2.14.0_MCXNx4x
+      revision: MCUX_2.16.000
     - name: mcux-sdk-middleware-sdmmc
       remote: nxp-mcuxpresso
-      revision: MCUX_2.14.0_MCXNx4x
+      revision: MCUX_2.16.000
       path: nxp-vee-mcxn947-frdm/bsp/mcux-sdk/middleware/sdmmc
     - name: mcux-sdk-middleware-tensorflow
       remote: nxp-mcuxpresso
-      revision: MCUX_2.14.0_MCXNx4x
+      revision: MCUX_2.16.000
       path: nxp-vee-mcxn947-frdm/bsp/mcux-sdk/middleware/eiq/tensorflow-lite
     - name: mcux-sdk-middleware-eiq
       remote: nxp-mcuxpresso
-      revision: MCUX_2.14.0_MCXNx4x
+      revision: MCUX_2.16.000
       path: nxp-vee-mcxn947-frdm/bsp/mcux-sdk/middleware/eiq
     - name: lwip
       remote: nxp-mcuxpresso
-      revision: MCUX_2.14.0_MCXNx4x
+      revision: MCUX_2.16.000
       path: nxp-vee-mcxn947-frdm/bsp/mcux-sdk/middleware/lwip
     - name: mbedtls
       remote: nxp-mcuxpresso
-      revision: MCUX_2.14.0_MCXNx4x
+      revision: MCUX_2.16.000
       path: nxp-vee-mcxn947-frdm/bsp/mcux-sdk/middleware/mbedtls
-
   self:
     path: nxp-vee-mcxn947-frdm
-    west-commands: scripts/west-commands.yml
+    west-commands: bsp/vee/scripts/west-commands.yml

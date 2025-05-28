@@ -5,6 +5,7 @@
       "type": "cmake",
       "label": "CMake: build",
       "command": "build",
+      "preset": "debug",
       "targets": [
         "all"
       ],
@@ -12,21 +13,29 @@
         "kind": "build",
         "isDefault": true
       },
-      "problemMatcher": [],
+      "problemMatcher": [
+        "$gcc"
+      ],
       "detail": "CMake template build task"
     },
     {
       "type": "cmake",
       "label": "CMake: clean",
       "command": "clean",
-      "problemMatcher": [],
+      "preset": "debug",
+      "problemMatcher": [
+        "$gcc"
+      ],
       "detail": "CMake template clean task"
     },
     {
       "type": "cmake",
       "label": "CMake: configure",
       "command": "configure",
-      "problemMatcher": [],
+      "preset": "debug",
+      "problemMatcher": [
+        "$gcc"
+      ],
       "detail": "CMake template configure task"
     }
   ]
